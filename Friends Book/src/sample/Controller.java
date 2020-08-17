@@ -1,6 +1,5 @@
 package sample;
 
-import com.sun.xml.internal.bind.WhiteSpaceProcessor;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -35,6 +34,8 @@ public class Controller {
    public void initialize(){
        choicePron.setItems(pronounList);
        choiceHairLen.setItems(hairLenList);
+       choicePron.getSelectionModel().select(2);
+       choiceHairLen.getSelectionModel().select(1);
    }
 
     public void addFriend(ActionEvent actionEvent) {
@@ -43,8 +44,8 @@ public class Controller {
         textName.clear();
         textEmail.clear();
         textPhoneNum.clear();
-        choicePron.setValue(null);
-        choiceHairLen.setValue(null);
+        choicePron.getSelectionModel().select(2);
+        choiceHairLen.getSelectionModel().select(1);
         pickHairColor.setValue(Color.WHITE);
         pickEyeColor.setValue(Color.WHITE);
     }

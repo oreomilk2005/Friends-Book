@@ -12,13 +12,15 @@ public class Friend {
     private javafx.scene.paint.Color eyeCol;
 
     Friend(String name, String pronoun, String phoneNumber, String emailAddress, javafx.scene.paint.Color hairColor,String hairLength, javafx.scene.paint.Color eyeColor){
-    this.name = name;
+    if(name.equals("")) this.name = "unknown friend";
+    else this.name= name;
     this.pronoun = pronoun;
     phoneNum = phoneNumber;
     email = emailAddress;
     hairCol= hairColor;
     hairLen = hairLength;
     eyeCol = eyeColor;
+
     }
 
     public String toString(){ return name; }
